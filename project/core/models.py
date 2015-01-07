@@ -12,7 +12,7 @@ class TimeStampedModel(models.Model):
 
 class Servidor(TimeStampedModel):
     name = models.CharField(max_length=25, verbose_name='hostname')
-    # aplicacoes
+    aplicacoes = models.ManyToManyField('Aplicacao')
 
     def __unicode__(self):
         return self.name
