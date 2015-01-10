@@ -65,6 +65,16 @@ class ResourcesTest(ResourceTestCase):
         self.assertHttpUnauthorized(resp_unauthorized)
 
 
+    def test_get_list_aplicacao(self):
+        resp_admin = self.api_client.get('/api/v1/aplicacao/', format='json', authentication=self.get_credentials(username=self.admin))
+        resp_user = self.api_client.get('/api/v1/aplicacao/', format='json', authentication=self.get_credentials(username=self.user))
+        resp_unauthorized = self.api_client.get('/api/v1/aplicacao/', format='json')
+
+        self.assertValidJSONResponse(resp_admin)
+        self.assertValidJSONResponse(resp_user)
+        self.assertHttpUnauthorized(resp_unauthorized)
+
+
     # TODO: 
     # cadastrar 1 servidor
     # cadastrar varios ao mesmo tempo
