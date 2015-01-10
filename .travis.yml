@@ -8,4 +8,6 @@ deploy:
   api_key:
     secure: SWB0Du5oyp2odwuZNhUPfS/3ClrXVRor7YVQrw6w33b9fhqwoAofKpeisie3nvU3SFObYUPhXEZicrCMWJeLEi40jD8a+S+oYCvP0fG1zLOHI3gz+kfMX8H30P6SNkLRsvCTqGCKBf6mQiAHBdyHX1yyvqWiAQ/LUMZJExQRY70=
   app: protected-temple-4302
-  run: "python manage.py migrate"
+  run:
+    - "python manage.py migrate"
+    - restart
