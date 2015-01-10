@@ -1,0 +1,476 @@
+[
+{
+    "fields": {
+        "model": "logentry",
+        "name": "log entry",
+        "app_label": "admin"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 1
+},
+{
+    "fields": {
+        "model": "permission",
+        "name": "permission",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 2
+},
+{
+    "fields": {
+        "model": "group",
+        "name": "group",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 3
+},
+{
+    "fields": {
+        "model": "user",
+        "name": "user",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 4
+},
+{
+    "fields": {
+        "model": "contenttype",
+        "name": "content type",
+        "app_label": "contenttypes"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 5
+},
+{
+    "fields": {
+        "model": "session",
+        "name": "session",
+        "app_label": "sessions"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 6
+},
+{
+    "fields": {
+        "model": "apiaccess",
+        "name": "api access",
+        "app_label": "tastypie"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 7
+},
+{
+    "fields": {
+        "model": "apikey",
+        "name": "api key",
+        "app_label": "tastypie"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 8
+},
+{
+    "fields": {
+        "model": "servidor",
+        "name": "servidor",
+        "app_label": "core"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 9
+},
+{
+    "fields": {
+        "model": "aplicacao",
+        "name": "aplicacao",
+        "app_label": "core"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 10
+},
+{
+    "fields": {
+        "aplicacoes": [
+            1
+        ],
+        "modified": "2015-01-10T00:26:53.351Z",
+        "name": "development",
+        "created": "2015-01-10T00:22:16.015Z"
+    },
+    "model": "core.servidor",
+    "pk": 1
+},
+{
+    "fields": {
+        "aplicacoes": [
+            1
+        ],
+        "modified": "2015-01-10T00:26:57.928Z",
+        "name": "qa1",
+        "created": "2015-01-10T00:22:21.903Z"
+    },
+    "model": "core.servidor",
+    "pk": 2
+},
+{
+    "fields": {
+        "aplicacoes": [
+            1
+        ],
+        "modified": "2015-01-10T00:27:01.706Z",
+        "name": "qa2",
+        "created": "2015-01-10T00:22:26.955Z"
+    },
+    "model": "core.servidor",
+    "pk": 3
+},
+{
+    "fields": {
+        "aplicacoes": [
+            1
+        ],
+        "modified": "2015-01-10T00:27:05.214Z",
+        "name": "staging",
+        "created": "2015-01-10T00:22:34.597Z"
+    },
+    "model": "core.servidor",
+    "pk": 4
+},
+{
+    "fields": {
+        "aplicacoes": [
+            1
+        ],
+        "modified": "2015-01-10T00:28:09.190Z",
+        "name": "production",
+        "created": "2015-01-10T00:22:42.012Z"
+    },
+    "model": "core.servidor",
+    "pk": 5
+},
+{
+    "fields": {
+        "modified": "2015-01-10T00:23:54.255Z",
+        "name": "g1",
+        "created": "2015-01-10T00:23:54.255Z"
+    },
+    "model": "core.aplicacao",
+    "pk": 1
+},
+{
+    "fields": {
+        "modified": "2015-01-10T00:24:01.066Z",
+        "name": "ge",
+        "created": "2015-01-10T00:24:01.066Z"
+    },
+    "model": "core.aplicacao",
+    "pk": 2
+},
+{
+    "fields": {
+        "modified": "2015-01-10T00:24:05.518Z",
+        "name": "ego",
+        "created": "2015-01-10T00:24:05.518Z"
+    },
+    "model": "core.aplicacao",
+    "pk": 3
+},
+{
+    "fields": {
+        "modified": "2015-01-10T00:24:11.359Z",
+        "name": "cadun",
+        "created": "2015-01-10T00:24:11.359Z"
+    },
+    "model": "core.aplicacao",
+    "pk": 4
+},
+{
+    "fields": {
+        "codename": "add_logentry",
+        "name": "Can add log entry",
+        "content_type": 1
+    },
+    "model": "auth.permission",
+    "pk": 1
+},
+{
+    "fields": {
+        "codename": "change_logentry",
+        "name": "Can change log entry",
+        "content_type": 1
+    },
+    "model": "auth.permission",
+    "pk": 2
+},
+{
+    "fields": {
+        "codename": "delete_logentry",
+        "name": "Can delete log entry",
+        "content_type": 1
+    },
+    "model": "auth.permission",
+    "pk": 3
+},
+{
+    "fields": {
+        "codename": "add_permission",
+        "name": "Can add permission",
+        "content_type": 2
+    },
+    "model": "auth.permission",
+    "pk": 4
+},
+{
+    "fields": {
+        "codename": "change_permission",
+        "name": "Can change permission",
+        "content_type": 2
+    },
+    "model": "auth.permission",
+    "pk": 5
+},
+{
+    "fields": {
+        "codename": "delete_permission",
+        "name": "Can delete permission",
+        "content_type": 2
+    },
+    "model": "auth.permission",
+    "pk": 6
+},
+{
+    "fields": {
+        "codename": "add_group",
+        "name": "Can add group",
+        "content_type": 3
+    },
+    "model": "auth.permission",
+    "pk": 7
+},
+{
+    "fields": {
+        "codename": "change_group",
+        "name": "Can change group",
+        "content_type": 3
+    },
+    "model": "auth.permission",
+    "pk": 8
+},
+{
+    "fields": {
+        "codename": "delete_group",
+        "name": "Can delete group",
+        "content_type": 3
+    },
+    "model": "auth.permission",
+    "pk": 9
+},
+{
+    "fields": {
+        "codename": "add_user",
+        "name": "Can add user",
+        "content_type": 4
+    },
+    "model": "auth.permission",
+    "pk": 10
+},
+{
+    "fields": {
+        "codename": "change_user",
+        "name": "Can change user",
+        "content_type": 4
+    },
+    "model": "auth.permission",
+    "pk": 11
+},
+{
+    "fields": {
+        "codename": "delete_user",
+        "name": "Can delete user",
+        "content_type": 4
+    },
+    "model": "auth.permission",
+    "pk": 12
+},
+{
+    "fields": {
+        "codename": "add_contenttype",
+        "name": "Can add content type",
+        "content_type": 5
+    },
+    "model": "auth.permission",
+    "pk": 13
+},
+{
+    "fields": {
+        "codename": "change_contenttype",
+        "name": "Can change content type",
+        "content_type": 5
+    },
+    "model": "auth.permission",
+    "pk": 14
+},
+{
+    "fields": {
+        "codename": "delete_contenttype",
+        "name": "Can delete content type",
+        "content_type": 5
+    },
+    "model": "auth.permission",
+    "pk": 15
+},
+{
+    "fields": {
+        "codename": "add_session",
+        "name": "Can add session",
+        "content_type": 6
+    },
+    "model": "auth.permission",
+    "pk": 16
+},
+{
+    "fields": {
+        "codename": "change_session",
+        "name": "Can change session",
+        "content_type": 6
+    },
+    "model": "auth.permission",
+    "pk": 17
+},
+{
+    "fields": {
+        "codename": "delete_session",
+        "name": "Can delete session",
+        "content_type": 6
+    },
+    "model": "auth.permission",
+    "pk": 18
+},
+{
+    "fields": {
+        "codename": "add_apiaccess",
+        "name": "Can add api access",
+        "content_type": 7
+    },
+    "model": "auth.permission",
+    "pk": 19
+},
+{
+    "fields": {
+        "codename": "change_apiaccess",
+        "name": "Can change api access",
+        "content_type": 7
+    },
+    "model": "auth.permission",
+    "pk": 20
+},
+{
+    "fields": {
+        "codename": "delete_apiaccess",
+        "name": "Can delete api access",
+        "content_type": 7
+    },
+    "model": "auth.permission",
+    "pk": 21
+},
+{
+    "fields": {
+        "codename": "add_apikey",
+        "name": "Can add api key",
+        "content_type": 8
+    },
+    "model": "auth.permission",
+    "pk": 22
+},
+{
+    "fields": {
+        "codename": "change_apikey",
+        "name": "Can change api key",
+        "content_type": 8
+    },
+    "model": "auth.permission",
+    "pk": 23
+},
+{
+    "fields": {
+        "codename": "delete_apikey",
+        "name": "Can delete api key",
+        "content_type": 8
+    },
+    "model": "auth.permission",
+    "pk": 24
+},
+{
+    "fields": {
+        "codename": "add_servidor",
+        "name": "Can add servidor",
+        "content_type": 9
+    },
+    "model": "auth.permission",
+    "pk": 25
+},
+{
+    "fields": {
+        "codename": "change_servidor",
+        "name": "Can change servidor",
+        "content_type": 9
+    },
+    "model": "auth.permission",
+    "pk": 26
+},
+{
+    "fields": {
+        "codename": "delete_servidor",
+        "name": "Can delete servidor",
+        "content_type": 9
+    },
+    "model": "auth.permission",
+    "pk": 27
+},
+{
+    "fields": {
+        "codename": "add_aplicacao",
+        "name": "Can add aplicacao",
+        "content_type": 10
+    },
+    "model": "auth.permission",
+    "pk": 28
+},
+{
+    "fields": {
+        "codename": "change_aplicacao",
+        "name": "Can change aplicacao",
+        "content_type": 10
+    },
+    "model": "auth.permission",
+    "pk": 29
+},
+{
+    "fields": {
+        "codename": "delete_aplicacao",
+        "name": "Can delete aplicacao",
+        "content_type": 10
+    },
+    "model": "auth.permission",
+    "pk": 30
+},
+{
+    "fields": {
+        "username": "filipe",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2015-01-10T00:21:58.092Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$in8JPiUl7Aqf$d1caOJQJMNcHwRdHdAnBLCz5OCAt4EIQQzTEuKmTTPg=",
+        "email": "filipe@mondaini.me",
+        "date_joined": "2015-01-10T00:21:58.092Z"
+    },
+    "model": "auth.user",
+    "pk": 1
+}
+]

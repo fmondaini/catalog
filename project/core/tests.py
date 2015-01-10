@@ -1,18 +1,15 @@
 # -*- coding: utf-8 -*-
-from django.contrib.auth.models import User
 from tastypie.test import ResourceTestCase
 
 
 class ResourcesTest(ResourceTestCase):
+    fixtures = ['data.json']
+
     def setUp(self):
         super(ResourcesTest, self).setUp()
 
         self.username = 'filipe'
         self.password = '123'
-        self.user = User.objects.create_user(
-            self.username,
-            'filipe@mondaini.me',
-            self.password)
 
     def get_credentials(self):
         return self.create_basic(username=self.username, password=self.password)
@@ -25,7 +22,8 @@ class ResourcesTest(ResourceTestCase):
         self.assertValidJSONResponse(resp)
 
         # Conta quantos servidores estao cadastrados
-        self.assertEqual(len(self.deserialize(resp)['objects']), 0)
+        self.assertEqual(len(self.deserialize(resp)['objects']), 5)
+
 
     # TODO: 
     # cadastrar 1 servidor
