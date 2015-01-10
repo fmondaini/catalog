@@ -15,14 +15,13 @@ class ResourcesTest(ResourceTestCase):
     def get_credentials(self, username):
         return self.create_basic(username=username, password=self.password)
 
-    def test_get_list_unauthorzied(self):
-        self.assertHttpUnauthorized(self.api_client.get('/api/v1/servidor/', format='json'))
-
-    def test_get_list_servidor_ok(self):
+    def test_get_list_servidor(self):
         resp_admin = self.api_client.get('/api/v1/servidor/', format='json', authentication=self.get_credentials(username=self.admin))
         resp_user = self.api_client.get('/api/v1/servidor/', format='json', authentication=self.get_credentials(username=self.user))
+        resp_unauthorized = self.api_client.get('/api/v1/servidor/', format='json')
         self.assertValidJSONResponse(resp_admin)
         self.assertValidJSONResponse(resp_user)
+        self.assertHttpUnauthorized(resp_unauthorized)
 
         # Conta quantos servidores estao cadastrados
         self.assertEqual(len(self.deserialize(resp_admin)['objects']), 5)
