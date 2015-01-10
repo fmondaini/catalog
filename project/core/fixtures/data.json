@@ -91,6 +91,14 @@
 },
 {
     "fields": {
+        "expire_date": "2015-01-24T01:00:17.824Z",
+        "session_data": "MjQ2YjhmZjNmZjY1OTIwZTdjNDMwOTU3NzUyNzc1ODg4YWZlZDkwNzp7Il9hdXRoX3VzZXJfaGFzaCI6IjQ5YmI3OTU4ODc1MTVlYWM5YjQ3MjUwZDIzMjgzY2NlMDk1YmMxNDMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+    },
+    "model": "sessions.session",
+    "pk": "3ye76a7x57827la4hqkl2bna4c9pzzuw"
+},
+{
+    "fields": {
         "aplicacoes": [
             1
         ],
@@ -463,7 +471,7 @@
         "is_active": true,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2015-01-10T00:21:58.092Z",
+        "last_login": "2015-01-10T01:00:17.821Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$12000$in8JPiUl7Aqf$d1caOJQJMNcHwRdHdAnBLCz5OCAt4EIQQzTEuKmTTPg=",
@@ -472,5 +480,49 @@
     },
     "model": "auth.user",
     "pk": 1
+},
+{
+    "fields": {
+        "username": "beltrano",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-01-10T01:00:28Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$2XtzfoLiGlmd$XjbLoa7Wfs3IivRnWamxBTeJtLOACVcSmKwtxSbLjM0=",
+        "email": "",
+        "date_joined": "2015-01-10T01:00:28Z"
+    },
+    "model": "auth.user",
+    "pk": 2
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-10T01:00:28.987Z",
+        "object_repr": "fulano",
+        "object_id": "2",
+        "change_message": "",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 1
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-01-10T01:01:15.155Z",
+        "object_repr": "beltrano",
+        "object_id": "2",
+        "change_message": "Changed username.",
+        "user": 1,
+        "content_type": 4
+    },
+    "model": "admin.logentry",
+    "pk": 2
 }
 ]
