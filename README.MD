@@ -1,5 +1,6 @@
 # Catalogo de servidores e aplicações
 
+[![Build Status](https://travis-ci.org/fmondaini/catalog.svg?branch=master)](https://travis-ci.org/fmondaini/catalog)
 
 ## Instalação no ambiente local:
 * Faça um clone do projeto
