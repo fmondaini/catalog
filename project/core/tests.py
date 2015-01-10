@@ -127,3 +127,17 @@ class ResourcesTest(ResourceTestCase):
 
         self.assertHttpAccepted(resp_accepted)
         self.assertHttpUnauthorized(resp_unauthorized)
+
+    def test_deletar_servidor(self):
+        resp_unauthorized = self.api_client.delete('/api/v1/servidor/1/', format='json', authentication=self.get_credentials(self.user))
+        resp_accepted = self.api_client.delete('/api/v1/servidor/1/', format='json', authentication=self.get_credentials(self.admin))
+
+        self.assertHttpUnauthorized(resp_unauthorized)
+        self.assertHttpAccepted(resp_accepted)
+
+    def test_deletar_aplicacao(self):
+        resp_unauthorized = self.api_client.delete('/api/v1/aplicacao/1/', format='json', authentication=self.get_credentials(self.user))
+        resp_accepted = self.api_client.delete('/api/v1/aplicacao/1/', format='json', authentication=self.get_credentials(self.admin))
+
+        self.assertHttpUnauthorized(resp_unauthorized)
+        self.assertHttpAccepted(resp_accepted)
