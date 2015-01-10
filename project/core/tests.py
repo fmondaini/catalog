@@ -107,3 +107,13 @@ class ResourcesTest(ResourceTestCase):
 
         self.assertHttpCreated(resp_created)
         self.assertHttpUnauthorized(resp_unauthorized)
+
+    def test_atualizar_servidor(self):
+        post_data = {
+            "aplicacoes": ["/api/v1/aplicacao/1/"]
+        }
+        resp_accepted = self.api_client.patch('/api/v1/servidor/1/', format='json', data=post_data, authentication=self.get_credentials(self.admin))
+        resp_unauthorized = self.api_client.patch('/api/v1/servidor/1/', format='json', data=post_data, authentication=self.get_credentials(self.user))
+
+        self.assertHttpAccepted(resp_accepted)
+        self.assertHttpUnauthorized(resp_unauthorized)
