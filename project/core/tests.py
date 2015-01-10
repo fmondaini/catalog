@@ -63,7 +63,6 @@ class ResourcesTest(ResourceTestCase):
         self.assertHttpCreated(resp_created)
         self.assertHttpUnauthorized(resp_unauthorized)
 
-
     def test_get_list_aplicacao(self):
         resp_admin = self.api_client.get('/api/v1/aplicacao/', format='json', authentication=self.get_credentials(username=self.admin))
         resp_user = self.api_client.get('/api/v1/aplicacao/', format='json', authentication=self.get_credentials(username=self.user))
@@ -73,19 +72,38 @@ class ResourcesTest(ResourceTestCase):
         self.assertValidJSONResponse(resp_user)
         self.assertHttpUnauthorized(resp_unauthorized)
 
+    def test_cadastrar_uma_aplicacao(self):
+        post_data = {"name": "testapp"}
 
-    # TODO: 
-    # cadastrar 1 servidor
-    # cadastrar varios ao mesmo tempo
-    # cadastrar 1 app
-    # cadastrar varios apps ao mesmo tempo
+        resp_created = self.api_client.post(
+            '/api/v1/aplicacao/',
+            format='json',
+            data=post_data,
+            authentication=self.get_credentials(username=self.admin))
+        resp_unauthorized = self.api_client.post(
+            '/api/v1/aplicacao/',
+            format='json',
+            data=post_data,
+            authentication=self.get_credentials(username=self.user))
 
-    # validar update realizado em servidor/app
+        self.assertHttpCreated(resp_created)
+        self.assertHttpUnauthorized(resp_unauthorized)
 
-    # deletar 1 app
-    # deletar varios apps
-    # deletar 1 servidor
-    # deletar varios servidores
+    def test_cadastrar_varias_aplicacoes(self): 
+        post_data = {}
+        for i in range(1,5):
+            post_data["name"] = "app%d" % i
 
-    # validar schema aplicacao
-    # validar schema servidor
+        resp_created = self.api_client.post(
+            '/api/v1/aplicacao/',
+            format='json',
+            data=post_data,
+            authentication=self.get_credentials(username=self.admin))
+        resp_unauthorized = self.api_client.post(
+            '/api/v1/aplicacao/',
+            format='json',
+            data=post_data,
+            authentication=self.get_credentials(username=self.user))
+
+        self.assertHttpCreated(resp_created)
+        self.assertHttpUnauthorized(resp_unauthorized)
