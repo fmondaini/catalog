@@ -16,7 +16,7 @@ Para rodar o projeto execute `python manage.py runserver`
 
 
 ## Uso da API
-Para fazer consultas nesta API, se faz necessário informar o `Content-Type` como `application/json` no Header. Também se faz necessário autenticar com um usuário/senha ([Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication))
+Para fazer consultas nesta API, se faz necessário informar o `Content-Type` como `application/json` no Header. Também se faz necessário autenticar com um usuário/senha: [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication)
 
 ## Listar endpoints:
 `GET /api/v1/`
